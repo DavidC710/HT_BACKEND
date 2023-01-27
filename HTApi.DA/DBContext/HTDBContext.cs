@@ -4,6 +4,7 @@ namespace HTApi.DA.DBContext
     public class HTDBContext : DbContext
     {
         public DbSet<PageConfiguration> PageConfiguration { get; set; }
+        public DbSet<New> New { get; set; }
         public HTDBContext(DbContextOptions options) : base(options)
         {
 

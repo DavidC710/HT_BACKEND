@@ -14,3 +14,4 @@ global using Microsoft.EntityFrameworkCore;
 global using HTApi.DA.DBContext;
 global using HTApi.Application.UseCases.Configuration.Input;
 global using HTApi.Models;
+global using HTApi.Application.UseCases.News.Input;
