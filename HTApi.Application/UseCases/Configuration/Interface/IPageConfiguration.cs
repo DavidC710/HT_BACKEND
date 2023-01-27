@@ -5,5 +5,6 @@ namespace HTApi.Application.UseCases.Configuration.Interface
     {
         Task<List<ConfigurationDTO>> GetAll();
         Task<PageConfiguration> Create(PageConfigurationInput input);
+        Task<PageConfiguration> Update(UpdatePageConfigurationInput input);
     }
 }

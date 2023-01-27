@@ -45,5 +45,19 @@ namespace HTApi.Application.UseCases.Configuration.Services
 
             return insert;
         }
+
+        public async Task<PageConfiguration> Update(UpdatePageConfigurationInput input)
+        {
+            var record = await pageConfigurationRepository.Where(t => t.Id == input.Id).FirstOrDefaultAsync();
+            record.Type = input.Type;
+            record.Code = input.Code;
+            record.Description = input.Description;
+            record.Date = input.Date;
+
+            pageConfigurationRepository.Update(record);
+            await context.SaveChangesAsync();
+
+            return record;
+        }
     }
 }

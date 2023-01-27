@@ -21,5 +21,11 @@ namespace HTApi.Web.Controllers
         {
             return await configuration.Create(input);
         }
+
+        [HttpPut]
+        public async Task<PageConfiguration> Update(UpdatePageConfigurationInput input)
+        {
+            return await configuration.Update(input);
+        }
     }
 }
